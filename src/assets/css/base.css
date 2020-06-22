@@ -1,0 +1,47 @@
+@import "./normalize.css";
+
+/* :root  -> 获取根元素html */
+:root {
+    /* 定义变量 */
+    --color-text: #666;
+    --color-high-text:#ff5777;
+    --color-tint:#ff8198;
+    --color-background:#fff;
+    --font-size:14px;
+    --line-height:1.5;
+}
+*,
+*::before
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC", "Microsoft Yahei","微软雅黑","Arial","sans-serif";
+    user-select: none; /* 禁止用书鼠标再页面上选中文字/图片 */
+    -webkit-tap-highlight-color:transparent;  /* webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节 */
+    background: var(--color-background);
+    width: 100vw;
+    font-size: var(--font-size);
+}
+a:link,a:visited,a {
+    color:#666;
+    text-decoration: none;
+}
+a:hover {color: var(--color-tint);}
+a:active {color:var(--color-high-text)} /* 鼠标点中激活链接 蓝色 */
+
+.clear-fix::after{
+    clear: both;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clear-fix{
+    zoom:1;
+}
